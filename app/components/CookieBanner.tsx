@@ -21,11 +21,11 @@ export default function CookieBanner() {
       <div>
         <strong>Cookie-Einstellungen</strong>
         <p>
-          Diese erste Version speichert nur deine Auswahl lokal im Browser.
-          Weitere Dienste werden später ergänzt.
+          Diese erste Version speichert lediglich eure Auswahl lokal im Browser.
         </p>
       </div>
-      <div>
+
+      <div className="cookieButtons">
         <button onClick={() => choose("necessary")}>Nur notwendige</button>
         <button className="accept" onClick={() => choose("all")}>Alle akzeptieren</button>
       </div>

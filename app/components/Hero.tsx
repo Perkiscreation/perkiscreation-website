@@ -1,67 +1,56 @@
-function EucalyptusAccent({ side }: { side: "left" | "right" }) {
-  return (
-    <svg
-      className={`eucalyptusAccent eucalyptusAccent--${side}`}
-      viewBox="0 0 220 420"
-      aria-hidden="true"
-    >
-      <path d="M108 408C112 334 112 258 104 184C99 139 92 91 78 24" />
-      <ellipse cx="92" cy="314" rx="24" ry="50" transform="rotate(-38 92 314)" />
-      <ellipse cx="126" cy="274" rx="24" ry="50" transform="rotate(42 126 274)" />
-      <ellipse cx="84" cy="226" rx="22" ry="46" transform="rotate(-42 84 226)" />
-      <ellipse cx="121" cy="186" rx="22" ry="46" transform="rotate(42 121 186)" />
-      <ellipse cx="72" cy="136" rx="20" ry="42" transform="rotate(-40 72 136)" />
-      <ellipse cx="104" cy="96" rx="20" ry="42" transform="rotate(38 104 96)" />
-      <ellipse cx="62" cy="62" rx="18" ry="36" transform="rotate(-36 62 62)" />
-    </svg>
-  );
-}
-
 export default function Hero() {
   return (
-    <section className="hero" id="start">
-      <EucalyptusAccent side="left" />
-
-      <div className="heroText">
-        <p className="eyebrow">Brautstrauß-Konservierung</p>
-
-        <h1 className="heroHeadline">
-          Wir bewahren,
-          <span>was euer Tag einzigartig macht.</span>
-        </h1>
-
-        <div className="heroDivider" aria-hidden="true">
-          <span />
-          <b>♥</b>
-          <span />
-        </div>
-
-        <p className="lead">
-          Eure Blumen erzählen eine Geschichte. Wir konservieren euren
-          Brautstrauß und verwandeln ihn in ein zeitloses Erinnerungsstück.
+    <section className="weddingHero" id="start">
+      <div className="weddingHeroContent">
+        <p className="weddingHeroEyebrow">
+          Erinnerungen verdienen etwas Besonderes
         </p>
 
-        <div className="heroButtons">
-          <a className="button heroPrimary" href="#kontakt">
-            Sichere dir deinen Platz
+        <h1 className="weddingHeroTitle">
+          Aus eurem Brautstrauß entsteht ein Erinnerungsstück für die Ewigkeit.
+        </h1>
+
+        <span className="weddingHeroLine" aria-hidden="true" />
+
+        <p className="weddingHeroText">
+          Wir konservieren euren Brautstrauß mit viel Liebe zum Detail und
+          schaffen daraus ein zeitloses Erinnerungsstück, das euch ein Leben
+          lang begleitet.
+        </p>
+
+        <div className="weddingHeroButtons">
+          <a className="weddingHeroPrimary" href="#ablauf">
+            Zur Ablaufübersicht <span aria-hidden="true">→</span>
           </a>
-          <a className="textLink" href="#produkte">
-            Formen entdecken
+
+          <a className="weddingHeroSecondary" href="#produkte">
+            Formen &amp; Preise ansehen <span aria-hidden="true">→</span>
           </a>
         </div>
-
-        <p className="heroSeason">Für 2026 &amp; 2027</p>
       </div>
 
-      <div className="heroVisual">
+      <div className="weddingHeroImageArea">
         <img
-          className="heroPhoto"
-          src="/hero-brautstrauss-hell.jpg"
-          alt="Heller Brautstrauß mit cremefarbenen und altrosa Blumen sowie Eukalyptus"
+          className="weddingHeroImage"
+          src="/hero.jpg"
+          alt="Brautstrauß und konserviertes Erinnerungsstück"
         />
-      </div>
 
-      <EucalyptusAccent side="right" />
+        <a className="weddingHeroAppointment" href="#kontakt">
+          <span className="weddingHeroCalendar" aria-hidden="true">
+            ♡
+          </span>
+
+          <span className="weddingHeroAppointmentText">
+            <small>
+              Bereit, euren Brautstrauß für immer zu bewahren?
+            </small>
+            <strong>Termin anfragen</strong>
+          </span>
+
+          <b aria-hidden="true">→</b>
+        </a>
+      </div>
     </section>
   );
 }

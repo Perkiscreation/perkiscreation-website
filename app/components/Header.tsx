@@ -1,42 +1,63 @@
-function FlowerMark() {
-  return (
-    <svg className="logoFlower" viewBox="0 0 54 76" aria-hidden="true">
-      <path d="M27 73C27 52 29 35 32 15" />
-      <path d="M31 25C21 22 16 16 15 8C23 9 29 14 31 25Z" />
-      <path d="M30 35C40 30 45 23 44 15C36 18 31 24 30 35Z" />
-      <path d="M28 48C18 44 12 38 11 30C19 31 25 37 28 48Z" />
-      <path d="M28 58C38 53 44 47 45 39C37 41 31 47 28 58Z" />
-      <circle cx="33" cy="12" r="4" />
-    </svg>
-  );
-}
+"use client";
+
+import { useState } from "react";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      <div className="topBar">Sichere dir deinen Platz für 2026 &amp; 2027</div>
+      <div className="announcement">
+        Sichere dir deinen Platz für 2026 &amp; 2027
+      </div>
 
-      <header className="siteHeader">
-        <a className="brand" href="#start" aria-label="Perkiscreation Startseite">
-          <span className="brandText">
-            <strong>PERKISCREATION</strong>
-            <small>Erinnerung für die Ewigkeit</small>
-          </span>
-          <FlowerMark />
+      <header className="header">
+        <a href="#start" className="brand">
+          <strong>PERKISCREATION</strong>
+          <span>Erinnerung für die Ewigkeit</span>
         </a>
 
-        <nav className="nav" aria-label="Hauptnavigation">
-          <a href="#produkte">Formen &amp; Preise</a>
-          <a href="#reservierung">Reservierung</a>
+        <nav className="nav">
+          <a href="#warum">Warum Perkiscreation</a>
           <a href="#ablauf">Ablauf</a>
-          <a href="#wissenswertes">Gut zu wissen</a>
+          <a href="#produkte">Formen &amp; Preise</a>
+          <a href="#wissen">Gut zu wissen</a>
           <a href="#kontakt">Kontakt</a>
         </nav>
 
-        <a className="button smallButton" href="#kontakt">
+        <a className="headerCta" href="#kontakt">
           Termin anfragen
         </a>
+
+        <button
+          className="menuButton"
+          type="button"
+          aria-label="Menü öffnen"
+          onClick={() => setOpen(!open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </header>
+
+      <nav className={`mobileNav ${open ? "mobileNavOpen" : ""}`}>
+        <a href="#warum" onClick={() => setOpen(false)}>
+          Warum Perkiscreation
+        </a>
+        <a href="#ablauf" onClick={() => setOpen(false)}>
+          Ablauf
+        </a>
+        <a href="#produkte" onClick={() => setOpen(false)}>
+          Formen &amp; Preise
+        </a>
+        <a href="#wissen" onClick={() => setOpen(false)}>
+          Gut zu wissen
+        </a>
+        <a href="#kontakt" onClick={() => setOpen(false)}>
+          Kontakt
+        </a>
+      </nav>
     </>
   );
 }

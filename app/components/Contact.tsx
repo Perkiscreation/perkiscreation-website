@@ -3,9 +3,9 @@
 import { FormEvent, useState } from "react";
 
 export default function Contact() {
-  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
 
@@ -14,35 +14,42 @@ export default function Contact() {
       [
         `Name: ${form.get("name")}`,
         `E-Mail: ${form.get("email")}`,
-        `Adresse: ${form.get("address")}`,
         `Hochzeitsdatum: ${form.get("date")}`,
         `Wunschprodukt: ${form.get("product")}`,
         "",
-        `Nachricht: ${form.get("notes")}`,
+        `Nachricht: ${form.get("message")}`,
       ].join("\n")
     );
 
     window.location.href =
       `mailto:Perkiscreation@gmail.com?subject=${subject}&body=${body}`;
 
-    setMessage(
-      "Dein E-Mail-Programm wird geöffnet. Prüfe die Angaben und sende die E-Mail anschließend ab."
+    setStatus(
+      "Euer E-Mail-Programm wird geöffnet. Prüft die Angaben und sendet die Nachricht anschließend ab."
     );
   }
 
   return (
     <section className="contact" id="kontakt">
-      <div className="contactText">
+      <div className="contactCopy">
         <p className="eyebrow">Termin anfragen</p>
         <h2>Wir sind für euch da.</h2>
         <p>
-          Erzähle uns von eurem Hochzeitstag, deinem Brautstrauß und deinen Wünschen. Gemeinsam finden wir die passende Form für dein persönliches Erinnerungsstück.
+          Erzählt uns von eurem Hochzeitstag, eurem Brautstrauß und euren
+          Wünschen. Gemeinsam finden wir die passende Form.
         </p>
+
         <a href="mailto:Perkiscreation@gmail.com">Perkiscreation@gmail.com</a>
-        <a href="https://www.instagram.com/perkiscreationnn/" target="_blank" rel="noreferrer">Instagram: @perkiscreationnn</a>
+        <a
+          href="https://www.instagram.com/perkiscreationnn/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram: @perkiscreationnn
+        </a>
       </div>
 
-      <form className="contactForm" onSubmit={handleSubmit}>
+      <form className="contactForm" onSubmit={submit}>
         <label>
           Name
           <input name="name" required />
@@ -53,18 +60,9 @@ export default function Contact() {
           <input name="email" type="email" required />
         </label>
 
-        <label className="full">
-          Adresse
-          <input
-            name="address"
-            type="text"
-            placeholder="Straße, Hausnummer, PLZ und Ort"
-          />
-        </label>
-
         <label>
           Hochzeitsdatum
-          <input name="date" type="date" />
+          <input name="date" type="date" required />
         </label>
 
         <label>
@@ -80,20 +78,20 @@ export default function Contact() {
             <option>Bogen L – 21 × 16 cm – 270 €</option>
             <option>Herz – 20 cm – 270 €</option>
             <option>Quadrat – 20 × 20 cm – 320 €</option>
-            <option>Individuelles Datum – nach Wunsch – 120 €</option>
+            <option>Individuelles Datum – 120 €</option>
           </select>
         </label>
 
         <label className="full">
           Nachricht
-          <textarea name="notes" rows={6} />
+          <textarea name="message" rows={6} />
         </label>
 
-        <button className="button full" type="submit">
-          Anfrage vorbereiten
+        <button className="primaryButton full" type="submit">
+          Termin anfragen
         </button>
 
-        {message && <p className="formMessage full">{message}</p>}
+        {status && <p className="formStatus full">{status}</p>}
       </form>
     </section>
   );

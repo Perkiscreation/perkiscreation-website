@@ -4,8 +4,7 @@ export default function Page() {
   return (
     <LegalPage title="Cookie-Einstellungen">
       <p>
-        Aktuell werden nur technisch notwendige Informationen zur Speicherung
-        deiner Cookie-Auswahl im Browser verwendet.
+        Aktuell wird nur die Auswahl aus dem Cookie-Hinweis lokal im Browser gespeichert.
       </p>
     </LegalPage>
   );

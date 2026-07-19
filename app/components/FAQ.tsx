@@ -1,24 +1,24 @@
 const faqs = [
-  ["Wann sollte ich meinen Termin reservieren?", "Am besten einige Wochen oder Monate vor der Hochzeit."],
-  ["Wann muss der Brautstrauß bei euch sein?", "Möglichst zeitnah nach der Hochzeit, damit die Blumen gut erhalten bleiben."],
-  ["Sind alle Blumen geeignet?", "Viele Blumen eignen sich sehr gut. Farben und Formen können sich durch die Trocknung leicht verändern."],
-  ["Wie lange dauert die Fertigstellung?", "Je nach Saison, Trocknung, Größe und Auftragslage beträgt die Bearbeitungszeit in der Regel etwa 2 bis 6 Monate."],
-  ["Wie wird die Reservierungsgebühr verrechnet?", "Die 50 € werden bei der Schlussrechnung vollständig angerechnet."],
+  ["Wann sollten wir reservieren?", "Am besten einige Wochen oder Monate vor der Hochzeit."],
+  ["Wann muss der Brautstrauß bei euch sein?", "Möglichst innerhalb von ein bis zwei Werktagen nach der Hochzeit."],
+  ["Sind alle Blumen geeignet?", "Viele Blumen eignen sich gut. Farbe und Form können sich beim Trocknen natürlich verändern."],
+  ["Wie lange dauert die Fertigstellung?", "In der Regel etwa 2 bis 6 Monate – abhängig von Saison, Trocknung und Auftragslage."],
+  ["Wie wird die Reservierungsgebühr verrechnet?", "Die 50 € werden vollständig mit dem späteren Endpreis verrechnet."],
 ];
 
 export default function FAQ() {
   return (
-    <section className="faq" id="faq">
-      <div className="sectionHeading">
+    <section className="section faq" id="faq">
+      <div className="sectionIntro">
         <p className="eyebrow">Häufige Fragen</p>
         <h2>Alles Wichtige auf einen Blick.</h2>
       </div>
 
       <div className="faqList">
-        {faqs.map(([question, answer]) => (
-          <details key={question}>
-            <summary>{question}</summary>
-            <p>{answer}</p>
+        {faqs.map(([q, a]) => (
+          <details key={q}>
+            <summary>{q}</summary>
+            <p>{a}</p>
           </details>
         ))}
       </div>

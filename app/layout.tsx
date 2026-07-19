@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Perkiscreation | Brautstrauß-Konservierung",
   description:
-    "Handgefertigte Erinnerungsstücke aus deinem Brautstrauß – individuell und für die Ewigkeit bewahrt.",
+    "Wir verwandeln euren Brautstrauß in ein handgefertigtes Erinnerungsstück für die Ewigkeit.",
 };
 
 export default function RootLayout({
