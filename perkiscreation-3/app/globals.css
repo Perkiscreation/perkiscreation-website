@@ -1,0 +1,759 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap");
+
+:root {
+  --cream: #f8f1ea;
+  --paper: #fffdfa;
+  --rose: #cf958f;
+  --rose-deep: #ad716b;
+  --sage: #727f70;
+  --ink: #3d3531;
+  --muted: #776c66;
+  --line: rgba(61, 53, 49, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.mobileHeader {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 10px 16px;
+  background: rgba(255, 253, 250, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--rose);
+  border-radius: 50%;
+  color: var(--rose-deep);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+}
+
+.logo strong {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  letter-spacing: .08em;
+}
+
+.logo small {
+  display: block;
+  color: var(--rose-deep);
+  font-size: 7px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.burger {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: transparent;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  margin: 7px auto;
+  background: var(--ink);
+}
+
+.drawer {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  z-index: 39;
+  display: grid;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  background: var(--paper);
+  box-shadow: 0 18px 40px rgba(61,53,49,.14);
+  transition: .25s ease;
+}
+
+.drawerOpen {
+  max-height: 280px;
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+
+.drawer a {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.newHero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.newHeroImage,
+.newHeroShade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.newHeroImage {
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+.newHeroShade {
+  background:
+    linear-gradient(to top, rgba(34, 28, 25, .78) 0%, rgba(34, 28, 25, .22) 58%, rgba(34, 28, 25, .05) 100%);
+}
+
+.newHeroContent {
+  position: relative;
+  z-index: 2;
+  padding: 130px 20px 34px;
+  color: white;
+}
+
+.kicker,
+.sectionLabel {
+  margin: 0 0 14px;
+  color: var(--rose);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.newHero h1,
+.mobileSection h2,
+.contactBlock h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  line-height: .98;
+}
+
+.newHero h1 {
+  max-width: 500px;
+  font-size: clamp(48px, 14vw, 64px);
+}
+
+.newHeroContent > p:last-of-type {
+  margin: 20px 0 26px;
+  color: rgba(255,255,255,.86);
+  line-height: 1.65;
+}
+
+.heroCtas {
+  display: grid;
+  gap: 10px;
+}
+
+.ctaSolid,
+.ctaGhost {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.ctaSolid {
+  background: var(--rose);
+  color: white;
+}
+
+.ctaGhost {
+  border: 1px solid rgba(255,255,255,.75);
+  background: rgba(255,255,255,.08);
+  color: white;
+  backdrop-filter: blur(8px);
+}
+
+.promiseStrip {
+  display: grid;
+  gap: 8px;
+  padding: 18px 20px;
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mobileSection {
+  padding: 76px 20px;
+}
+
+.mobileSection h2,
+.contactBlock h2 {
+  font-size: 44px;
+}
+
+.processSection {
+  background: var(--cream);
+}
+
+.mobileTimeline {
+  display: grid;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.mobileTimeline article {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--paper);
+}
+
+.mobileTimeline article > span {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f1deda;
+  color: var(--rose-deep);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+.mobileTimeline h3,
+.shapeCard h3 {
+  margin: 0 0 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+}
+
+.mobileTimeline p,
+.shapeCard p,
+.contactLead {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.horizontalCards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 82%;
+  gap: 14px;
+  overflow-x: auto;
+  margin: 28px -20px 0;
+  padding: 0 20px 18px;
+  scroll-snap-type: x mandatory;
+}
+
+.shapeCard {
+  scroll-snap-align: start;
+  min-height: 310px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 14px 36px rgba(61,53,49,.07);
+}
+
+.shapeVisual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 110px;
+  height: 110px;
+  margin-bottom: 26px;
+  background: linear-gradient(145deg, #ecd3cf, #f8efec);
+  border: 1px solid rgba(173, 113, 107, .22);
+  box-shadow:
+    inset 0 0 0 8px rgba(255,255,255,.36),
+    0 12px 28px rgba(61,53,49,.08);
+}
+
+
+.shape-hexagon {
+  clip-path: polygon(25% 6%, 75% 6%, 96% 50%, 75% 94%, 25% 94%, 4% 50%);
+}
+
+.shape-arch {
+  border-radius: 55px 55px 12px 12px;
+}
+
+.shape-heart {
+  width: 108px;
+  height: 100px;
+  clip-path: polygon(
+    50% 92%,
+    8% 52%,
+    3% 34%,
+    8% 18%,
+    20% 8%,
+    36% 8%,
+    50% 20%,
+    64% 8%,
+    80% 8%,
+    92% 18%,
+    97% 34%,
+    92% 52%
+  );
+}
+
+.shape-square {
+  border-radius: 8px;
+}
+
+.shape-date {
+  width: 128px;
+  height: 78px;
+  border-radius: 12px;
+}
+
+.shape-date::after {
+  display: none;
+}
+
+.shape-date span {
+  position: relative;
+  z-index: 2;
+  color: var(--rose-deep);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+
+.shapeCard strong {
+  display: block;
+  margin-top: 20px;
+  color: var(--rose-deep);
+}
+
+.wideLink {
+  display: flex;
+  min-height: 54px;
+  margin-top: 18px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rose);
+  border-radius: 6px;
+  color: var(--rose-deep);
+  font-weight: 600;
+}
+
+.contactBlock {
+  padding: 76px 20px 34px;
+  background: var(--sage);
+  color: white;
+}
+
+.contactBlock .sectionLabel {
+  color: #f0c6c1;
+}
+
+.contactLead {
+  margin-top: 16px;
+  color: rgba(255,255,255,.78);
+}
+
+.simpleForm {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.simpleForm input,
+.simpleForm select,
+.simpleForm textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 8px;
+  background: rgba(255,255,255,.12);
+  color: white;
+  font: inherit;
+}
+
+.simpleForm input::placeholder,
+.simpleForm textarea::placeholder {
+  color: rgba(255,255,255,.68);
+}
+
+.simpleForm select option { color: var(--ink); }
+
+.simpleForm button {
+  min-height: 56px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--rose);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+}
+
+.miniFooter {
+  display: grid;
+  gap: 4px;
+  margin-top: 46px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.18);
+}
+
+.miniFooter strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  letter-spacing: .08em;
+}
+
+.miniFooter span {
+  color: rgba(255,255,255,.7);
+  font-size: 12px;
+}
+
+@media (min-width: 900px) {
+  .mobileHeader {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .newHeroContent {
+    max-width: 760px;
+    padding-left: 7vw;
+    padding-bottom: 70px;
+  }
+
+  .newHero h1 {
+    font-size: 78px;
+  }
+
+  .heroCtas {
+    grid-template-columns: auto auto;
+    justify-content: start;
+  }
+
+  .ctaSolid,
+  .ctaGhost {
+    min-width: 210px;
+    padding: 0 24px;
+  }
+
+  .promiseStrip {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+  .mobileSection {
+    padding: 110px 7vw;
+  }
+
+  .mobileTimeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .horizontalCards {
+    grid-auto-flow: initial;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contactBlock {
+    padding: 110px 20vw;
+  }
+}
+
+
+/* FORMEN WIE IN DER URSPRÜNGLICHEN WEBSITE */
+.productsIntro {
+  margin: 14px 0 30px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.originalProductGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.originalProductCard {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(61, 53, 49, .06);
+}
+
+.originalProductCard .shapeVisual {
+  margin: 0;
+}
+
+.productInfo h3 {
+  margin: 0 0 5px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.productInfo > p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.productInfo ul {
+  margin: 15px 0 17px;
+  padding: 0;
+  list-style: none;
+}
+
+.productInfo li {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.productInfo a {
+  color: var(--rose-deep);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* GUT ZU WISSEN */
+.goodToKnow {
+  background: #f7f0e9;
+}
+
+.knowledgeList {
+  display: grid;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.knowledgeCard {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.78);
+  border: 1px solid var(--line);
+}
+
+.knowledgeCard > span {
+  color: var(--rose-deep);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+}
+
+.knowledgeCard h3 {
+  margin: 0 0 5px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.knowledgeCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 430px) {
+  .originalProductCard {
+    grid-template-columns: 94px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .originalProductCard .shapeVisual {
+    width: 92px;
+    height: 92px;
+  }
+
+  .originalProductCard .shape-date {
+    width: 92px;
+    height: 62px;
+  }
+
+  .productInfo h3 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 900px) {
+  .originalProductGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .knowledgeList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+.shippingNote,
+.reservationInfo {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 16px;
+}
+.shippingNote {
+  border: 1px solid rgba(173, 113, 107, .2);
+  background: rgba(255,255,255,.75);
+}
+.shippingNote strong,
+.reservationInfo strong {
+  display: block;
+  margin-bottom: 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+.shippingNote p,
+.reservationInfo p {
+  margin: 0;
+  line-height: 1.65;
+}
+.shippingNote p { color: var(--muted); }
+.reservationInfo {
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.08);
+}
+.reservationInfo p { color: rgba(255,255,255,.76); }
+.consentRow {
+  display: grid !important;
+  grid-template-columns: 20px 1fr;
+  align-items: start;
+  gap: 10px !important;
+  color: rgba(255,255,255,.82);
+  line-height: 1.5;
+}
+.consentRow input {
+  width: 18px !important;
+  height: 18px;
+  margin: 2px 0 0;
+  padding: 0 !important;
+  accent-color: var(--rose);
+}
+
+
+/* SICHTBARE BLÜTEN IN DEN FORMEN */
+.shapeVisual {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.shapeVisual::before,
+.shapeVisual::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+
+.shapeVisual::before {
+  width: 34px;
+  height: 34px;
+  left: 18px;
+  top: 22px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 10%, #cf958f 0 18%, transparent 19%),
+    radial-gradient(circle at 88% 38%, #cf958f 0 18%, transparent 19%),
+    radial-gradient(circle at 72% 82%, #cf958f 0 18%, transparent 19%),
+    radial-gradient(circle at 28% 82%, #cf958f 0 18%, transparent 19%),
+    radial-gradient(circle at 12% 38%, #cf958f 0 18%, transparent 19%),
+    radial-gradient(circle at 50% 50%, #f2c3b9 0 16%, transparent 17%);
+  filter: drop-shadow(22px 20px 0 rgba(201, 151, 154, .55));
+}
+
+.shapeVisual::after {
+  width: 52px;
+  height: 40px;
+  right: 10px;
+  bottom: 16px;
+  background:
+    radial-gradient(ellipse at 20% 60%, #7f927c 0 22%, transparent 23%),
+    radial-gradient(ellipse at 50% 30%, #8fa189 0 22%, transparent 23%),
+    radial-gradient(ellipse at 80% 65%, #72836f 0 22%, transparent 23%);
+  transform: rotate(-18deg);
+}
+
+.shape-date::before {
+  left: 12px;
+  top: 20px;
+  transform: scale(.8);
+}
+
+.shape-date::after {
+  display: block;
+  right: 8px;
+  bottom: 12px;
+  transform: scale(.75) rotate(-18deg);
+}
+
+.shape-date span {
+  position: relative;
+  z-index: 3;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+}
+
+/* DEUTLICHER TRANSPARENTER HERO-BUTTON */
+.ctaTransparent {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,.95);
+  border-radius: 999px;
+  background: rgba(255,255,255,.14);
+  color: white;
+  font-weight: 700;
+  letter-spacing: .02em;
+  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+  backdrop-filter: blur(10px);
+}
+
+.ctaTransparent:hover {
+  background: rgba(255,255,255,.24);
+}
