@@ -703,23 +703,39 @@ p { color: var(--muted); line-height: 1.8; }
     border-radius: 14px;
   }
 
-  .weddingHeroAppointment > b {
-    display: none;
-  }
+ .weddingHeroAppointment {
+  right: 16px;
+  bottom: 16px;
 
-  .weddingHeroCalendar {
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
-  }
+  width: auto;
+  max-width: 270px;
 
-  .weddingHeroAppointment small {
-    font-size: 10px;
-  }
+  grid-template-columns: auto 1fr;
+  gap: 10px;
 
-  .weddingHeroAppointment strong {
-    font-size: 25px;
-  }
+  padding: 10px 13px;
+  border-radius: 14px;
+}
+
+.weddingHeroAppointment > b {
+  display: none;
+}
+
+.weddingHeroCalendar {
+  width: 38px;
+  height: 38px;
+  font-size: 19px;
+}
+
+.weddingHeroAppointment small {
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.weddingHeroAppointment strong {
+  font-size: 20px;
+  line-height: 1;
+}
 
   .why {
     padding-top: 82px;
@@ -2287,4 +2303,62 @@ h3,
 }
 .weddingHeroText {
   color: #c98f98 !important;
+}
+/* =========================================================
+   KLEINER TERMIN-BUTTON AUF DEM HANDY
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .weddingHeroAppointment {
+    right: 18px !important;
+    bottom: 18px !important;
+    width: auto !important;
+    max-width: 315px !important;
+    min-height: 0 !important;
+    padding: 11px 16px !important;
+    gap: 11px !important;
+    border-radius: 16px !important;
+  }
+
+  .weddingHeroCalendar {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 20px !important;
+  }
+
+  .weddingHeroAppointment small {
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .weddingHeroAppointment strong {
+    font-size: 22px !important;
+    line-height: 1 !important;
+  }
+}
+
+/* Auf sehr kleinen Handys noch etwas kompakter */
+@media (max-width: 480px) {
+  .weddingHeroAppointment {
+    right: 14px !important;
+    bottom: 14px !important;
+    max-width: 285px !important;
+    padding: 9px 13px !important;
+    gap: 9px !important;
+  }
+
+  .weddingHeroCalendar {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 18px !important;
+  }
+
+  .weddingHeroAppointment small {
+    font-size: 8px !important;
+  }
+
+  .weddingHeroAppointment strong {
+    font-size: 20px !important;
+  }
 }
