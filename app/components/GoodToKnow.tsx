@@ -1,9 +1,9 @@
 const points = [
-  ["Harz & UV-Licht", "Auch UV-stabilisiertes Epoxidharz kann sich über viele Jahre leicht verändern. Direkte Sonne sollte vermieden werden."],
-  ["Natürliche Besonderheiten", "Winzige Bläschen oder kleine Spuren können trotz sorgfältiger Verarbeitung entstehen und gehören zur Handarbeit."],
-  ["Farbe & Form", "Beim Trocknen können Blumen heller, dunkler, kleiner oder transparenter werden."],
-  ["Bearbeitungszeit", "Je nach Saison dauert es ungefähr 2 bis 6 Monate, bis euer Erinnerungsstück bei euch ankommt."],
-  ["Versand", "Bitte sendet den Strauß ein bis zwei Werktage nach der Hochzeit per Express oder bringt ihn nach Absprache vorbei."],
+  ["Harz & UV-Licht", "Auch UV-stabilisiertes Epoxidharz kann sich über viele Jahre leicht verändern oder vergilben. Direkte Sonne und starke Wärme sollten vermieden werden."],
+  ["Natürliche Handarbeit", "Kleine Mikroblasen, feine Schlieren, Staubpartikel oder minimale Unebenheiten können trotz sorgfältiger Verarbeitung auftreten und sind kein Hinweis auf industrielle Serienfertigung."],
+  ["Farbe & Form", "Echte Blumen verändern sich beim Trocknen. Sie können heller, dunkler, kleiner, transparenter oder bräunlicher werden."],
+  ["Bearbeitungszeit", "Je nach Saison, Trocknung und Auftragslage dauert die Fertigstellung in der Regel ungefähr 2 bis 6 Monate."],
+  ["Schneller Versand", "Bitte sendet den Strauß idealerweise ein bis zwei Tage, spätestens drei Tage nach der Hochzeit per DHL Express oder bringt ihn nach Absprache vorbei."],
 ];
 
 export default function GoodToKnow() {
@@ -13,7 +13,6 @@ export default function GoodToKnow() {
         <p className="eyebrow">Ehrlich &amp; transparent</p>
         <h2>Gut zu wissen.</h2>
       </div>
-
       <div className="knowledgeGrid">
         {points.map(([title, text], index) => (
           <article key={title}>

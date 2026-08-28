@@ -1,0 +1,32 @@
+PERKISCREATION – SAUBERER START
+
+Diese Version wurde auf Basis deines hochgeladenen Projekts bereinigt.
+
+WICHTIG:
+- Der rote "TEST – RICHTIGES PROJEKT"-Block in page.tsx wurde entfernt.
+- Process.tsx hatte feste Inline-Größen von 42px. Diese wurden entfernt.
+- Die Prozess-Komponente verwendet jetzt dieselben CSS-Klassennamen wie globals.css.
+- Die sechs Icons sind jetzt klein und werden ausschließlich über globals.css gesteuert.
+- Die alten widersprüchlichen Timeline-Regeln wurden ersetzt.
+- GoodToKnow bekommt ebenfalls eine feste, kleine Icon-Größe.
+
+START:
+1. Alle laufenden Next-Server beenden:
+   taskkill /IM node.exe /F
+
+2. In diesen Projektordner wechseln.
+
+3. Falls node_modules fehlt:
+   npm install
+
+4. Starten:
+   npm run dev
+
+5. Nur diese Adresse öffnen:
+   http://localhost:3000
+
+Wenn dort "Port 3000 is in use" erscheint, nicht einfach 3001 öffnen,
+sondern zuerst wieder "taskkill /IM node.exe /F" ausführen und danach
+"npm run dev".
+
+Die vorhandene inhaltliche Struktur wurde ansonsten nicht neu erfunden.

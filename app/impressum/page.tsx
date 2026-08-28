@@ -3,12 +3,15 @@ import LegalPage from "../components/LegalPage";
 export default function Page() {
   return (
     <LegalPage title="Impressum">
-      <p>Bitte ergänzt hier vor Veröffentlichung eure vollständigen Unternehmensdaten.</p>
-      <h2>Angaben gemäß § 5 DDG</h2>
-      <p>Vor- und Nachname<br />Straße und Hausnummer<br />PLZ und Ort<br />Deutschland</p>
+      <p>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
+      <h2>Anbieterin</h2>
+      <p>Perkiscreation<br />Inhaberin: Claudia Perk<br />Am Winterhafen 1B<br />28217 Bremen<br />Deutschland</p>
       <h2>Kontakt</h2>
-      <p>E-Mail: Perkiscreation@gmail.com</p>
-      <p>Diese Seite ist ein Platzhalter und keine Rechtsberatung.</p>
+      <p>E-Mail: <a href="mailto:perkiscreation@gmail.com">perkiscreation@gmail.com</a></p>
+      <h2>Umsatzsteuer</h2>
+      <p>Aufgrund der Kleinunternehmerregelung gemäß § 19 UStG wird keine Umsatzsteuer ausgewiesen.</p>
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
     </LegalPage>
   );
 }

@@ -12,7 +12,11 @@ export default function Footer() {
         <a href="#produkte">Formen &amp; Preise</a>
         <a href="#ablauf">Ablauf</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="https://www.instagram.com/perkiscreationnn/" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.instagram.com/perkiscreationnn/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Instagram
         </a>
       </nav>
@@ -20,7 +24,8 @@ export default function Footer() {
       <nav>
         <Link href="/impressum">Impressum</Link>
         <Link href="/datenschutz">Datenschutz</Link>
-        <Link href="/cookies">Cookie-Einstellungen</Link>
+        <Link href="/agb">AGB</Link>
+        <Link href="/widerruf">Widerruf</Link>
       </nav>
 
       <p>© {new Date().getFullYear()} Perkiscreation</p>

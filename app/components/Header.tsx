@@ -5,19 +5,19 @@ import { useState } from "react";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  const closeMenu = () => setOpen(false);
+
   return (
     <>
-      <div className="announcement">
-        Sichere dir deinen Platz für 2026 &amp; 2027
-      </div>
+      <div className="announcement">Sichere dir deinen Platz für 2026 &amp; 2027</div>
 
       <header className="header">
-        <a href="#start" className="brand">
+        <a href="#start" className="brand" onClick={closeMenu}>
           <strong>PERKISCREATION</strong>
           <span>Erinnerung für die Ewigkeit</span>
         </a>
 
-        <nav className="nav">
+        <nav className="nav" aria-label="Hauptnavigation">
           <a href="#warum">Warum Perkiscreation</a>
           <a href="#ablauf">Ablauf</a>
           <a href="#produkte">Formen &amp; Preise</a>
@@ -25,14 +25,13 @@ export default function Header() {
           <a href="#kontakt">Kontakt</a>
         </nav>
 
-        <a className="headerCta" href="#kontakt">
-          Termin anfragen
-        </a>
+        <a className="headerCta" href="#kontakt">Platz reservieren</a>
 
         <button
           className="menuButton"
           type="button"
-          aria-label="Menü öffnen"
+          aria-label={open ? "Menü schließen" : "Menü öffnen"}
+          aria-expanded={open}
           onClick={() => setOpen(!open)}
         >
           <span />
@@ -41,22 +40,12 @@ export default function Header() {
         </button>
       </header>
 
-      <nav className={`mobileNav ${open ? "mobileNavOpen" : ""}`}>
-        <a href="#warum" onClick={() => setOpen(false)}>
-          Warum Perkiscreation
-        </a>
-        <a href="#ablauf" onClick={() => setOpen(false)}>
-          Ablauf
-        </a>
-        <a href="#produkte" onClick={() => setOpen(false)}>
-          Formen &amp; Preise
-        </a>
-        <a href="#wissen" onClick={() => setOpen(false)}>
-          Gut zu wissen
-        </a>
-        <a href="#kontakt" onClick={() => setOpen(false)}>
-          Kontakt
-        </a>
+      <nav className={`mobileNav ${open ? "mobileNavOpen" : ""}`} aria-label="Mobile Navigation">
+        <a href="#warum" onClick={closeMenu}>Warum Perkiscreation</a>
+        <a href="#ablauf" onClick={closeMenu}>Ablauf</a>
+        <a href="#produkte" onClick={closeMenu}>Formen &amp; Preise</a>
+        <a href="#wissen" onClick={closeMenu}>Gut zu wissen</a>
+        <a href="#kontakt" onClick={closeMenu}>Kontakt</a>
       </nav>
     </>
   );

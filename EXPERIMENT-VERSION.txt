@@ -1,0 +1,3 @@
+PERKISCREATION – Experimentelle Layout-Version
+
+Header und Hero bleiben bewusst unverändert. Unterhalb des Startbereichs wurde die Seite neu geordnet und kompakter gestaltet, damit Informationen nicht mehrfach auftauchen. Der separate Reservierungsblock entfällt; das Kontaktformular ist der eindeutige nächste Schritt.

@@ -1,56 +1,95 @@
 export default function Hero() {
   return (
     <section className="weddingHero" id="start">
+
+      {/* LINKER TEXTBEREICH */}
       <div className="weddingHeroContent">
+
         <p className="weddingHeroEyebrow">
           Erinnerungen verdienen etwas Besonderes
         </p>
 
         <h1 className="weddingHeroTitle">
-          Aus eurem Brautstrauß entsteht ein Erinnerungsstück für die Ewigkeit.
+          Aus eurem Brautstrauß entsteht
+          <span>
+            eine Erinnerung für die Ewigkeit.
+          </span>
         </h1>
 
-        <span className="weddingHeroLine" aria-hidden="true" />
+        <span
+          className="weddingHeroLine"
+          aria-hidden="true"
+        />
 
         <p className="weddingHeroText">
-          Wir konservieren euren Brautstrauß mit viel Liebe zum Detail und
-          schaffen daraus ein zeitloses Erinnerungsstück, das euch ein Leben
-          lang begleitet.
+          Mit viel Liebe zum Detail konservieren wir euren
+          Brautstrauß in hochwertigem Kunstharz und gestalten
+          daraus ein einzigartiges Erinnerungsstück, das euch
+          ein Leben lang begleitet.
         </p>
 
-        <div className="weddingHeroButtons">
-          <a className="weddingHeroPrimary" href="#ablauf">
-            Zur Ablaufübersicht <span aria-hidden="true">→</span>
-          </a>
-
-          <a className="weddingHeroSecondary" href="#produkte">
-            Formen &amp; Preise ansehen <span aria-hidden="true">→</span>
-          </a>
-        </div>
       </div>
 
+
+      {/* RECHTES BILD */}
       <div className="weddingHeroImageArea">
+
         <img
           className="weddingHeroImage"
           src="/hero.jpg"
-          alt="Brautstrauß und konserviertes Erinnerungsstück"
+          alt="Eleganter Brautstrauß mit rosa Pfingstrosen und cremefarbenen Rosen"
         />
 
-        <a className="weddingHeroAppointment" href="#kontakt">
-          <span className="weddingHeroCalendar" aria-hidden="true">
-            ♡
-          </span>
 
-          <span className="weddingHeroAppointmentText">
-            <small>
-              Bereit, euren Brautstrauß für immer zu bewahren?
-            </small>
-            <strong>Termin anfragen</strong>
-          </span>
+        {/* BUTTONS AUF DEM BLUMENSTRAUSS */}
+        <div className="weddingHeroOverlayButtons">
 
-          <b aria-hidden="true">→</b>
-        </a>
+          {/* Platz reservieren */}
+          <a
+            className="weddingHeroAppointment"
+            href="#kontakt"
+          >
+            <span
+              className="weddingHeroCalendar"
+              aria-hidden="true"
+            >
+              ♡
+            </span>
+
+            <span className="weddingHeroAppointmentText">
+              <small>
+                Bereit, euren Brautstrauß für immer zu bewahren?
+              </small>
+
+              <strong>
+                Platz reservieren
+              </strong>
+            </span>
+
+            <b aria-hidden="true">
+              →
+            </b>
+          </a>
+
+
+          {/* FORMEN & PREISE */}
+          <a
+            className="weddingHeroPrices"
+            href="#produkte"
+          >
+            <span>
+              Formen &amp; Preise ansehen
+            </span>
+
+            <b aria-hidden="true">
+              →
+            </b>
+          </a>
+
+        </div>
+
       </div>
+
     </section>
   );
 }
