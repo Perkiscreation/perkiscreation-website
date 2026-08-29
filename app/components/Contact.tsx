@@ -124,14 +124,14 @@ export default function Contact() {
             <option value="" disabled>Bitte auswählen</option>
             <option>Ich bin mir noch nicht sicher</option>
             <option>Hexagon S · 15 cm · 210 €</option>
-            <option>Hexagon M · 20 cm · 270 €</option>
-            <option>Hexagon L · 24 cm · 320 €</option>
-            <option>Bogen S · 13 × 7 cm · 190 €</option>
-            <option>Bogen M · 16 × 12 cm · 210 €</option>
+            <option>Hexagon M · 20 cm · 250 €</option>
+            <option>Hexagon L · 24 cm · 290 €</option>
+            <option>Bogen S · 13 × 7 cm · 210 €</option>
+            <option>Bogen M · 16 × 12 cm · 230 €</option>
             <option>Bogen L · 21 × 16 cm · 270 €</option>
             <option>Herz · 20 cm · 270 €</option>
             <option>Quadrat S · 15 × 15 cm · 210 €</option>
-            <option>Quadrat M · 20 × 20 cm · 270 €</option>
+            <option>Quadrat M · 20 × 20 cm · 290 €</option>
             <option>Individuelles Datum · ab 120 €</option>
           </select>
         </label>
