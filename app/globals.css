@@ -2664,6 +2664,7 @@ h3,
    ========================================================= */
 
 @media (max-width: 700px) {
+
   .weddingHeroPrices {
     width: 100% !important;
     max-width: 390px !important;
@@ -2672,6 +2673,10 @@ h3,
     padding: 0 22px !important;
     font-size: 0.9rem !important;
     border-radius: 22px !important;
+
+    right: 0 !important;
+    bottom: 145px !important;
+
     box-sizing: border-box !important;
   }
 
