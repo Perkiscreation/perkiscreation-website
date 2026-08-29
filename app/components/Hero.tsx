@@ -11,7 +11,7 @@ export default function Hero() {
 
         <h1 className="weddingHeroTitle">
           Aus eurem Brautstrauß entsteht
-          <span>
+          <span style={{ color: "#8A7163" }}>
             eine Erinnerung für die Ewigkeit.
           </span>
         </h1>

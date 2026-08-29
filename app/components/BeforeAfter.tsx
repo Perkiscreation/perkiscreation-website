@@ -19,17 +19,16 @@ const comparisons: Comparison[] = [
     eyebrow: "",
     title: "Pfingstrosen",
     description:
-      "Vom frischen Brautstrauß zum persönlichen Erinnerungsstück – entdeckt den Unterschied selbst.",
+      "Vom frischen Brautstrauß zum persönlichen Erinnerungsstück ",
     before: "/vorher-pfingstrosen.jpg",
     after: "/nachher-pfingstrosen.jpg",
     beforeAlt: "Frische weiße Pfingstrosen",
     afterAlt:
       "Weiße getrocknete Pfingstrosen in einem klaren Hexagon aus Kunstharz",
     captionTitle:
-      "Aus frischen Pfingstrosen wird ein Erinnerungsstück.",
-    captionText:
-      "Die Blüten werden sorgfältig getrocknet, arrangiert und in hochwertigem Kunstharz konserviert.",
-  },
+  "Aus frischen Pfingstrosen wird ein Erinnerungsstück.",
+captionText: "",
+},
 ];
 
 function ComparisonSlider({ item }: { item: Comparison }) {
