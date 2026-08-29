@@ -2091,11 +2091,7 @@ h3,
 
 .weddingHeroPrices {
   right: 32px;
-  bottom: 158px;
-  width: 390px;
-  min-height: 0;
-  height: 72px;
-  box-sizing: border-box;
+  bottom: 135px;
   justify-content: space-between;
   padding: 0 28px;
   font-family: var(--font-body), sans-serif;
@@ -2675,7 +2671,7 @@ h3,
     border-radius: 22px !important;
 
     right: 0 !important;
-    bottom: 145px !important;
+    bottom: 82px !important;
 
     box-sizing: border-box !important;
   }
