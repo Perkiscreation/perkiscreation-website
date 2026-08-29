@@ -16,7 +16,7 @@ type Comparison = {
 
 const comparisons: Comparison[] = [
   {
-    eyebrow: "01 · Frische Blüten",
+    eyebrow: "",
     title: "Pfingstrosen",
     description:
       "Vom frischen Brautstrauß zum persönlichen Erinnerungsstück – entdeckt den Unterschied selbst.",

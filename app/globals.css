@@ -2584,3 +2584,121 @@ h3,
   }
 
 }
+/* =========================================================
+   MOBILE – FEINSCHLIFF
+   Nur für Smartphones
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* -------------------------------------------------------
+     1. FORMEN & PREISE BUTTON
+     Auf dem Handy genauso kompakt wie "Platz reservieren"
+     ------------------------------------------------------- */
+
+  .heroCta,
+  .heroPriceCta,
+  .heroFormsCta,
+  .formsCta {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 16px 24px !important;
+  }
+
+  /* Falls der Button innerhalb einer CTA-Karte sitzt */
+  .heroCta a,
+  .heroPriceCta a,
+  .heroFormsCta a,
+  .formsCta a {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 14px 22px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     2. SECHS SCHRITTE
+     Auf dem Handy wieder EINSPALTIG
+     ------------------------------------------------------- */
+
+  .sixStepTimeline {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .sixStepTimeline article {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .sixStepTimeline h3,
+  .sixStepTimeline p {
+    max-width: 100% !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+
+
+  /* -------------------------------------------------------
+     3. "SICHERT EUCH EUREN PLATZ"
+     Diesen Block auf Mobile entfernen
+     ------------------------------------------------------- */
+
+  .reserveSection,
+  .reservationSection,
+  .bookingSection,
+  .platzSection,
+  .reserveBlock {
+    display: none !important;
+  }
+
+}
+/* =========================================================
+   MOBILE FEINSCHLIFF
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Formen & Preise – kompakt wie Platz reservieren */
+  .weddingHeroPrices {
+    padding: 14px 22px !important;
+    min-height: 0 !important;
+    height: auto !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+  }
+
+  .weddingHeroPrices span {
+    font-size: 14px !important;
+  }
+
+  .weddingHeroPrices b {
+    font-size: 18px !important;
+  }
+
+
+  /* Die sechs Schritte auf dem Handy wieder untereinander */
+  .sixStepTimeline {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .sixStepTimeline article {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .sixStepTimeline h3,
+  .sixStepTimeline p {
+    overflow: visible !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+
+}

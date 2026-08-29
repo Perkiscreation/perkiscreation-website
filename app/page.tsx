@@ -1,10 +1,9 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Why from "./components/Why";
-import Process from "./components/Process";
-import BeforeAfter from "./components/BeforeAfter";
 import Products from "./components/Products";
-import Reservation from "./components/Reservation";
+import BeforeAfter from "./components/BeforeAfter";
+import Process from "./components/Process";
 import GoodToKnow from "./components/GoodToKnow";
 import PersonalizationExample from "./components/PersonalizationExample";
 import Contact from "./components/Contact";
@@ -20,7 +19,6 @@ export default function Home() {
       <Products />
       <BeforeAfter />
       <Process />
-      <Reservation />
       <GoodToKnow />
       <PersonalizationExample />
       <Contact />
