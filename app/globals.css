@@ -2288,3 +2288,299 @@ h3,
 .weddingHeroText {
   color: #c98f98 !important;
 }
+/* =========================================================
+   MOBILE LAYOUT – KOMPAKTER
+   Desktop bleibt unverändert
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* ==============================
+     FORMEN & PREISE
+     2 Kacheln nebeneinander
+     ============================== */
+
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .productCard {
+    min-width: 0 !important;
+  }
+
+
+  /* ==============================
+     GUT ZU WISSEN
+     2 Kacheln nebeneinander
+     ============================== */
+
+  .knowledgeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+
+  /* ==============================
+     FORMEN & PREISE BUTTON
+     kleiner auf dem Handy
+     ============================== */
+
+  .weddingHeroPrices {
+    width: auto !important;
+    max-width: 250px !important;
+    min-height: 0 !important;
+    padding: 12px 16px !important;
+    margin: 0 auto !important;
+    font-size: 13px !important;
+    border-radius: 16px !important;
+  }
+
+  .weddingHeroPrices span {
+    font-size: 13px !important;
+  }
+
+  .weddingHeroPrices b {
+    font-size: 17px !important;
+  }
+
+
+  /* ==============================
+     PLATZ RESERVIEREN
+     kleiner auf dem Handy
+     ============================== */
+
+  .weddingHeroAppointment {
+    width: auto !important;
+    max-width: 285px !important;
+    padding: 9px 12px !important;
+    margin: 8px auto 0 !important;
+    border-radius: 16px !important;
+  }
+
+  .weddingHeroAppointmentText small {
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+  }
+
+  .weddingHeroAppointment strong {
+    font-size: 17px !important;
+    line-height: 1.1 !important;
+  }
+
+  .weddingHeroAppointment > b {
+    font-size: 17px !important;
+  }
+
+  .weddingHeroCalendar {
+    width: 40px !important;
+    height: 40px !important;
+    flex: 0 0 40px !important;
+    font-size: 21px !important;
+  }
+
+}
+/* =========================================================
+   MOBILE – KOMPAKTER & ÜBERSICHTLICHER
+   Desktop bleibt unverändert
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* -------------------------------------------------------
+     FORMEN & PREISE
+     Zwei Kacheln nebeneinander
+     ------------------------------------------------------- */
+
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .productCard {
+    min-width: 0 !important;
+  }
+
+  .shapeBox {
+    padding: 16px !important;
+  }
+
+  .shape {
+    width: 70% !important;
+    max-width: 130px !important;
+  }
+
+  .productBody {
+    padding: 16px !important;
+  }
+
+  .productBody h3 {
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .priceList {
+    margin: 6px 0 12px !important;
+  }
+
+  .priceRow {
+    gap: 6px !important;
+    padding: 8px 0 !important;
+  }
+
+  .priceRow div {
+    gap: 5px !important;
+    flex-wrap: wrap;
+  }
+
+  .priceRow strong,
+  .priceRow b {
+    font-size: 14px !important;
+  }
+
+  .priceRow span {
+    font-size: 10px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     GUT ZU WISSEN
+     Zwei Kacheln nebeneinander
+     ------------------------------------------------------- */
+
+  .knowledgeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .knowledgeGrid article {
+    padding: 18px 14px !important;
+  }
+
+  .knowledgeGrid h3 {
+    min-height: auto !important;
+    font-size: 17px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .knowledgeGrid p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     DIE SECHS SCHRITTE
+     Zwei nebeneinander
+     ------------------------------------------------------- */
+
+  .sixStepTimeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px 12px !important;
+  }
+
+  .sixStepTimeline::before {
+    display: none !important;
+  }
+
+  .sixStepTimeline article {
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  .sixStepTimeline .timelineDot {
+    width: 42px !important;
+    height: 42px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sixStepTimeline article h3 {
+    min-height: auto !important;
+    font-size: 17px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 7px !important;
+  }
+
+  .sixStepTimeline article p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  .stepNumber {
+    font-size: 10px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO – FORMEN & PREISE BUTTON
+     ------------------------------------------------------- */
+
+  .weddingHeroPrices {
+    width: auto !important;
+    max-width: 230px !important;
+    min-height: 0 !important;
+    padding: 10px 14px !important;
+    gap: 8px !important;
+    border-radius: 14px !important;
+    font-size: 12px !important;
+  }
+
+  .weddingHeroPrices span {
+    font-size: 12px !important;
+  }
+
+  .weddingHeroPrices b {
+    font-size: 16px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO – PLATZ RESERVIEREN
+     Etwas kleiner, aber weiterhin gut sichtbar
+     ------------------------------------------------------- */
+
+  .weddingHeroAppointment {
+    width: auto !important;
+    max-width: 275px !important;
+    padding: 9px 12px !important;
+    gap: 9px !important;
+    border-radius: 15px !important;
+  }
+
+  .weddingHeroAppointmentText small {
+    font-size: 8px !important;
+    line-height: 1.25 !important;
+  }
+
+  .weddingHeroAppointmentText strong {
+    font-size: 17px !important;
+  }
+
+  .weddingHeroCalendar {
+    width: 40px !important;
+    height: 40px !important;
+    flex: 0 0 40px !important;
+    font-size: 20px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     ALLGEMEINE MOBILE ABSTÄNDE
+     etwas kompakter, ohne die Seite zu quetschen
+     ------------------------------------------------------- */
+
+  .section {
+    padding-top: 65px !important;
+    padding-bottom: 65px !important;
+  }
+
+  .sectionIntro {
+    margin-bottom: 30px !important;
+  }
+
+  .sectionIntro h2 {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+  }
+
+}
